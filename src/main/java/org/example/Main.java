@@ -21,7 +21,7 @@ public class Main {
     private List<String> filesNames = new ArrayList<>();
     private List<String> indexInform = new ArrayList<>();
     private String newFile_path = "C:/some/path/";
-    private String prefix = "simple-";
+    private String prefix = "";
     private boolean shortStatistic = false;
     private boolean longStatistic = false;
     private boolean addTofile = false;
