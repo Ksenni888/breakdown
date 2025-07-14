@@ -1,0 +1,11 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="MisspelledHeader" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="CUSTOM_HEADERS">
+        <header value="java -Djava.util.logging.config.file=logging.properties -jar yourjar.jar" />
+        <header value="java -Djava.util.logging.config.file=log4j.properties -jar un.jar" />
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
