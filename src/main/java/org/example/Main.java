@@ -52,7 +52,6 @@ public class Main {
     }
 
     private void breakdown(List<String>filesNames, boolean addTofile) {
-        log.info("Breakdown");
         int counter_integers = 0;
         int counter_floats = 0;
         int counter_strings = 0;
