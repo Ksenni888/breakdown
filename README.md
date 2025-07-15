@@ -34,7 +34,8 @@
 -----------------------------------------------------------------------------------------
 ![Static Badge](https://img.shields.io/badge/11.0.18%20-%20green?label=java%20version)
 ![Static Badge](https://img.shields.io/badge/1.5.18%20-%20green?label=logback-classic)
-![Static Badge](https://img.shields.io/badge/2.0.16%20-%20green?label=slf4j-api)
+![Static Badge](https://img.shields.io/badge/1.5.18%20-%20green?label=logback-core)
+![Static Badge](https://img.shields.io/badge/2.0.17%20-%20green?label=slf4j-api)
 ![Static Badge](https://img.shields.io/badge/4.0.0%20-%20green?label=maven)
 
 # Как работает приложение.
