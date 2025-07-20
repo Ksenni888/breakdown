@@ -150,52 +150,52 @@ public class Main {
                     log.error("Failed to close string.txt file.", fail_close_string_file);
                 }
             }
-            System.out.println("Данные успешно записаны");
+            System.out.println("Date recorded successfully");
             System.out.println();
             if (shortStatistic) {
-                System.out.println("Краткая статистика: ");
+                System.out.println("Short statistic: ");
                 System.out.println();
-                System.out.println("Число записанных элементов: " + (counter_integers + counter_floats + counter_strings));
-                System.out.println("Целые числа: " + counter_integers);
-                System.out.println("Вещественные числа: " + counter_floats);
-                System.out.println("Строки:" + counter_strings);
+                System.out.println("Number of recorded elements: " + (counter_integers + counter_floats + counter_strings));
+                System.out.println("Integers: " + counter_integers);
+                System.out.println("Floats: " + counter_floats);
+                System.out.println("Strings:" + counter_strings);
             }
             if (longStatistic) {
-                System.out.println("Полная статистика: ");
+                System.out.println("Full statistic: ");
                 if (!integers.isEmpty()) {
                     int sum = integers.stream().mapToInt(i -> i).sum();
                     System.out.println();
-                    System.out.println("Статистика по integers: ");
-                    System.out.println("Общее количество чисел: " + counter_integers);
-                    System.out.println("Максимальное число: " + Collections.max(integers));
-                    System.out.println("Минимальное число: " + Collections.min(integers));
-                    System.out.println("Сумма целых чисел: " + sum);
-                    System.out.println("Среднее арифметическое: " + sum / counter_integers);
+                    System.out.println("Statistic by integers: ");
+                    System.out.println("Total number of numbers: " + counter_integers);
+                    System.out.println("Maximum number: " + Collections.max(integers));
+                    System.out.println("Minimum number: " + Collections.min(integers));
+                    System.out.println("Summ of Integers: " + sum);
+                    System.out.println("Arithmetic mean: " + sum / counter_integers);
                 }
                 if (!floats.isEmpty()) {
                     double sum = floats.stream().mapToDouble(x -> Double.parseDouble(x.toString())).sum();
                     System.out.println();
-                    System.out.println("Статистика по floats:");
-                    System.out.println("Общее количество чисел: " + counter_floats);
-                    System.out.println("Максимальное число: " + Collections.max(floats));
-                    System.out.println("Минимальное числое: " + Collections.min(floats));
-                    System.out.println("Сумма чисел: " + sum);
-                    System.out.println("Среднее арифметическое: " + sum / counter_floats);
+                    System.out.println("Statistic by floats:");
+                    System.out.println("Total number of floats: " + counter_floats);
+                    System.out.println("Maximum number: " + Collections.max(floats));
+                    System.out.println("Minimum number: " + Collections.min(floats));
+                    System.out.println("Summ of floats: " + sum);
+                    System.out.println("Arithmetic mean: " + sum / counter_floats);
                 }
                 if (!strings.isEmpty()) {
                     Optional<String> longestString = strings.stream().max(Comparator.comparingInt(String::length));
                     Optional<String> shortestString = strings.stream().min(Comparator.comparingInt(String::length));
                     System.out.println();
-                    System.out.println("Статистика по strings: ");
-                    System.out.println("Общее количество строк: " + counter_strings);
-                    System.out.println("Максимальная длина строки: " + (longestString.toString().length() - 10));
-                    System.out.println("Минимальная длина строки: " + (shortestString.toString().length() - 10));
+                    System.out.println("Statistic by strings: ");
+                    System.out.println("Total number of strings: " + counter_strings);
+                    System.out.println("Maximum length of string: " + (longestString.toString().length() - 10));
+                    System.out.println("Minimum length of string: " + (shortestString.toString().length() - 10));
                 }
             }
             filesNames.clear();
         }
 
-        else {System.out.println("Файлов для чтения не задано");}
+        else {System.out.println("No files for reading");}
     }
 
     public static void main(String[] args) {
