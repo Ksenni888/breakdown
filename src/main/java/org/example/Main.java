@@ -84,7 +84,7 @@ public class Main {
                             } catch (IOException create_integer_file) {
                                 log.error("Failed to create integer.txt file.", create_integer_file);
                             }
-                        } else if (st.contains(".") || check_float(st)) {
+                        } else if (st.contains(".") && check_float(st)) {
                             try {
                                 if (b_float == 0 && addTofile) {
                                     b_float = 1;
