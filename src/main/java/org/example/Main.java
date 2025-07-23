@@ -25,9 +25,9 @@ public class Main {
     private boolean shortStatistic = false;
     private boolean longStatistic = false;
     private boolean addTofile = false;
-    private BufferedWriter writer;
-    private BufferedWriter writer1;
-    private BufferedWriter writer2;
+    private BufferedWriter writer_integer;
+    private BufferedWriter writer_string;
+    private BufferedWriter writer_float;
     private int a_int = 0;
     private int b_float = 0;
     private int c_string = 0;
@@ -68,15 +68,15 @@ public class Main {
                             try {
                                 if (a_int == 0 && addTofile) {
                                     a_int = 1;
-                                    writer = new BufferedWriter(new FileWriter(newFile_path + prefix + "integer.txt", true));
+                                    writer_integer = new BufferedWriter(new FileWriter(newFile_path + prefix + "integer.txt", true));
                                 }
                                 if (a_int == 0) {
                                     a_int = 1;
-                                    writer = new BufferedWriter(new FileWriter(newFile_path + prefix + "integer.txt"));
+                                    writer_integer = new BufferedWriter(new FileWriter(newFile_path + prefix + "integer.txt"));
                                 }
-                                writer.append(st);
+                                writer_integer.append(st);
                                 integers.add(Integer.parseInt(st));
-                                writer.newLine();
+                                writer_integer.newLine();
                                 counter_integers += 1;
                                 if (!indexInform.contains("a_int")) {
                                     indexInform.add("a_int");
@@ -88,15 +88,15 @@ public class Main {
                             try {
                                 if (b_float == 0 && addTofile) {
                                     b_float = 1;
-                                    writer1 = new BufferedWriter(new FileWriter(newFile_path + prefix + "float.txt", true));
+                                    writer_float = new BufferedWriter(new FileWriter(newFile_path + prefix + "float.txt", true));
                                 }
                                 if (b_float == 0) {
                                     b_float = 1;
-                                    writer1 = new BufferedWriter(new FileWriter(newFile_path + prefix + "float.txt"));
+                                    writer_float = new BufferedWriter(new FileWriter(newFile_path + prefix + "float.txt"));
                                 }
-                                writer1.append(st);
+                                writer_float.append(st);
                                 floats.add(Float.parseFloat(st));
-                                writer1.newLine();
+                                writer_float.newLine();
                                 counter_floats += 1;
                                 if (!indexInform.contains("b_float")) {
                                     indexInform.add("b_float");
@@ -108,15 +108,15 @@ public class Main {
                             try {
                                 if (c_string == 0 && addTofile) {
                                     c_string = 1;
-                                    writer2 = new BufferedWriter(new FileWriter(newFile_path + prefix + "string.txt", true));
+                                    writer_string = new BufferedWriter(new FileWriter(newFile_path + prefix + "string.txt", true));
                                 }
                                 if (c_string == 0) {
                                     c_string = 1;
-                                    writer2 = new BufferedWriter(new FileWriter(newFile_path + prefix + "string.txt"));
+                                    writer_string = new BufferedWriter(new FileWriter(newFile_path + prefix + "string.txt"));
                                 }
-                                writer2.append(st);
+                                writer_string.append(st);
                                 strings.add(st);
-                                writer2.newLine();
+                                writer_string.newLine();
                                 counter_strings += 1;
                                 if (!indexInform.contains("c_string")) {
                                     indexInform.add("c_string");
@@ -133,19 +133,19 @@ public class Main {
             }
             if (a_int == 1) {
                 try {
-                    writer.close();} catch (IOException fail_close_integer_file) {
+                    writer_integer.close();} catch (IOException fail_close_integer_file) {
                     log.error("Failed to close integer.txt file.", fail_close_integer_file);
                 }
             }
             if (b_float == 1) { try {
-                writer1.close();
+                writer_float.close();
             } catch (IOException fail_close_float_file) {
                 log.error("Failed to close float.txt file.", fail_close_float_file);
             }
             }
             if (c_string == 1) {
                 try{
-                    writer2.close();
+                    writer_string.close();
                 } catch (IOException fail_close_string_file) {
                     log.error("Failed to close string.txt file.", fail_close_string_file);
                 }
